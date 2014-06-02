@@ -1,7 +1,14 @@
-<html>
-  <script>
-    var nameReverse = prompt("Type your last name then a comma followed by your first name.");
-    var splitArray = nameReverse.split(",");
-    console.log(splitArray[1].trim() + " " + splitArray[0].trim());
-  </script>
-</html>
+var RoboticGreeter = function RoboticGreeter() {
+    this.interrogate = function () {
+        var nameReverse = prompt("Type your last name then a comma followed by your first name.")
+        return nameReverse
+    }
+    this.relayToConsole = function (string) {
+        var splitArray = string.split(",")
+        console.log(splitArray[1].trim() + " " + splitArray[0].trim())
+    }
+}
+
+
+var veronika = new RoboticGreeter()
+veronika.relayToConsole(veronika.interrogate())
