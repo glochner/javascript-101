@@ -1,0 +1,75 @@
+<html>
+<body>
+</body>
+<script>
+var f = document.createElement("form");
+f.setAttribute('method',"post");
+f.setAttribute('action',"/my/formData");
+
+// my break elements to separate the fields, pretty lame code here
+var b = document.createElement("br");
+var b2 = document.createElement("br");
+var b3 = document.createElement("br");
+var b4 = document.createElement("br");
+
+//what is your name? field
+var il = document.createElement("label");
+il.innerHTML = "What is your name?";
+
+var i = document.createElement("input"); 
+i.setAttribute('type',"text");
+i.setAttribute('name',"name");
+i.setAttribute('required',"true");
+
+//what is your telephone? field
+var tl = document.createElement("label");
+tl.innerHTML = "What is your telephone number?";
+
+var t = document.createElement("input"); 
+t.setAttribute('type',"tel");
+t.setAttribute('name',"telephone");
+t.setAttribute('required',"true");
+
+//what is your email? field
+var el = document.createElement("label");
+el.innerHTML = "What is your email address?";
+
+var e = document.createElement("input"); 
+e.setAttribute('type',"email");
+e.setAttribute('name',"email");
+e.setAttribute('required',"true");
+
+//what is your fave color? field
+var cl = document.createElement("label");
+cl.innerHTML = "What is favorite color?";
+
+var c = document.createElement("input"); 
+c.setAttribute('type',"text");
+c.setAttribute('name',"color");
+
+
+//submit button
+var s = document.createElement("input"); 
+s.setAttribute('type',"submit");
+s.setAttribute('value',"Submit");
+
+f.appendChild(il);
+f.appendChild(i);
+f.appendChild(b);
+f.appendChild(tl);
+f.appendChild(t);
+f.appendChild(b2);
+f.appendChild(el);
+f.appendChild(e);
+f.appendChild(b3);
+f.appendChild(cl);
+f.appendChild(c);
+f.appendChild(b4);
+f.appendChild(s);
+
+
+document.getElementsByTagName("body")[0].appendChild(f);
+
+</script>
+
+</html>
